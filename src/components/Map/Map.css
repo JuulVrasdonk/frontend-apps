@@ -1,0 +1,45 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #2A3236;
+}
+
+h1, h2, h3, h4, strong {
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  color: white;
+}
+
+p, a, span, li, button {
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: regular;
+  color: white;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.divider {
+  width: 1px;
+  height: 170px;
+  background-color: #101010;
+}
+
+section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.map-container {
+  width: 76.4vw;
+  height: 80vh;
+}
+/*# sourceMappingURL=Map.css.map */
