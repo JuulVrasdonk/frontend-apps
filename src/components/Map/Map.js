@@ -1,11 +1,14 @@
 import React, { useRef, useEffect, useState } from 'react'
 import './Map.css';
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import * as d3 from "d3";
 import * as input from "./data.json"
 import  mapboxgl  from '!mapbox-gl'; // eslint-disable-line import/no-webpack-loader-syntax
+import ZoomButton from "../ZoomButton/ZoomButton.js"
 
 mapboxgl.accessToken = 'pk.eyJ1IjoianV1bHZyYXNkb25rIiwiYSI6ImNrdnRnbW8ydjByZGgyb205ZmZvZWJjYW4ifQ.1kI6XuFZQ1JkxTAjgzjcrA'; 
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Map() {
     const mapContainer = useRef(null);
@@ -47,7 +50,7 @@ export default function Map() {
 
       const data = input.default
 
-      
+
       // In deze project functie zeg ik tegen Mapbox wat de coörinaten 
       // zijn uit mijn data array. 
       function project(d) {
@@ -63,13 +66,6 @@ export default function Map() {
         .classed("dot", true)
         .attr("r", 5)
         .style("fill", "#1B60DB")
-    
-    
-      d3.select("circle:last-of-type")
-        .attr("r", 10)
-        .attr("id", "schiphol")
-        .style("fill", "#914BD2")
-    
     
       // Nu render ik de dots SVG's naar de kaart door ze door de 
       // project functie heen te halen. Via cx en cy hieraan te 
@@ -110,14 +106,13 @@ export default function Map() {
         d3Map.on("viewreset", render);
         d3Map.on("move", render);
         d3Map.on("moveend", render);
-
     });
-
   return (
     <section>
         <div className="divider"></div>
-        <div></div>
-        <div ref={mapContainer} className="map-container" />
+        <div className="mapWrapper">
+          <div ref={mapContainer} className="map-container" />
+        </div>
     </section>
   );
 }
