@@ -5,7 +5,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import * as d3 from "d3";
 import * as input from "./data.json"
 import  mapboxgl  from '!mapbox-gl'; // eslint-disable-line import/no-webpack-loader-syntax
-import ZoomButton from "../ZoomButton/ZoomButton.js"
 
 mapboxgl.accessToken = 'pk.eyJ1IjoianV1bHZyYXNkb25rIiwiYSI6ImNrdnRnbW8ydjByZGgyb205ZmZvZWJjYW4ifQ.1kI6XuFZQ1JkxTAjgzjcrA'; 
 gsap.registerPlugin(ScrollTrigger);
