@@ -1,0 +1,33 @@
+[
+    {
+        "Title": "Europe",
+        "img": "./assets/continents/Europe.svg",
+        "destinations": 229
+    },
+    {
+        "Title": "North-America",
+        "img": "./assets/continents/North-America.svg",
+        "destinations": 445
+    },
+    {
+        "Title": "South-America",
+        "img": "./assets/continents/South-America.svg",
+        "destinations": 84
+    },
+    {
+        "Title": "Africa",
+        "img": "./assets/continents/Africa.svg",
+        "destinations": 72
+    },
+    {
+        "Title": "Asia",
+        "img": "./assets/continents/Asia.svg",
+        "destinations": 138
+    },
+    {
+        "Title": "Oceania",
+        "img": "./assets/continents/Oceania.svg",
+        "destinations": 22
+    }
+]
+
