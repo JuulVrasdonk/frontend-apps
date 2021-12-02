@@ -1,13 +1,12 @@
 import React, { useRef, useEffect, useState } from 'react'
 import './Map.css';
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import * as d3 from "d3";
 import * as input from "./data.json"
 import  mapboxgl  from '!mapbox-gl'; // eslint-disable-line import/no-webpack-loader-syntax
 
 mapboxgl.accessToken = 'pk.eyJ1IjoianV1bHZyYXNkb25rIiwiYSI6ImNrdnRnbW8ydjByZGgyb205ZmZvZWJjYW4ifQ.1kI6XuFZQ1JkxTAjgzjcrA'; 
-gsap.registerPlugin(ScrollTrigger);
+
 
 export default function Map() {
     const mapContainer = useRef(null);
@@ -97,7 +96,6 @@ export default function Map() {
           scale: 1, 
           opacity: .7,
           stagger: .007, 
-          // ease: Elastic.easeOut.config(1, 0.3)
       })
     
         // Hier vertel ik wat dots moeten als ik in- of uitzoom of beweeg.

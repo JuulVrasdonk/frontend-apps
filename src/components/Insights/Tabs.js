@@ -59,8 +59,6 @@ export default function TabGroup() {
     const [activeTitle, setActiveTitle] = useState(titles[0]);
     const [activeImg, setActiveImg] = useState(images[0])
     const [activeDestination, setActiveDestination] = useState(destinations[0])
-    console.log(titles.indexOf(activeTitle));
-    console.log(activeImg);
     
     return (
       <div className="continentsWrapper">
