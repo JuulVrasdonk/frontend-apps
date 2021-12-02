@@ -10,17 +10,22 @@ const Tab = styled.button`
   padding: 10px 30px;
   cursor: pointer;
   color: white;
-  background-color: #62747D;
+  background-color: transparent;
   border: 0;
   outline: 0;
   ${({ active }) =>
     active &&
     `
-    background: linear-gradient(96.26deg, #3174EC 5.71%, #4181F3 107.68%)
+    background: linear-gradient(96.26deg, #3174EC 5.71%, #4181F3 107.68%);
+    border-radius: 26px;
   `}
 `;
 const ButtonGroup = styled.div`
   display: flex;
+  background-color: #353e42;
+  border-radius: 26px;
+  width: fit-content;
+  margin: 200px auto 0 auto;
 `;
 
 // End Styled components
@@ -58,7 +63,7 @@ export default function TabGroup() {
     console.log(activeImg);
     
     return (
-      <>
+      <div className="continentsWrapper">
         <ButtonGroup>
           {titles.map(title => (
             <Tab
@@ -70,13 +75,16 @@ export default function TabGroup() {
             </Tab>
           ))}
         </ButtonGroup>
-        <p />
         <article>
-            <img src={activeImg} alt="" />
-            <h2>{activeTitle}</h2>
-            <p>Destinations: {activeDestination}</p>
+            <div className="continentContainer">
+                <img src={activeImg} alt="" />
+            </div>
+            <section>
+                <h2>{activeTitle}</h2>
+                <p>Destinations: {activeDestination}</p>
+            </section>
         </article>
     
-      </>
+      </div>
     )
 }
