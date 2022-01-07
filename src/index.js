@@ -2,11 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './Global-styling/global.css'
 import Header from './components/Header/Header.js';
+import Main from './components/Main/Main.js';
 
 
 ReactDOM.render(
   <React.StrictMode>
     <Header />
+    <Main />
   </React.StrictMode>,
   document.getElementById('root')
 );
