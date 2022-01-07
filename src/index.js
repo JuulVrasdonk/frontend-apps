@@ -8,7 +8,6 @@ import Main from './components/Main/Main.js';
 ReactDOM.render(
   <React.StrictMode>
     <Header />
-    <Main />
   </React.StrictMode>,
   document.getElementById('root')
 );
